@@ -32,7 +32,7 @@ class ViewController: UIViewController, ShellController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.nicerDicer.addSubview(UIView())
+        //self.nicerDicer.addSubview(UIView())
         // Do any additional setup after loading the view, typically from a nib.
     }
 
