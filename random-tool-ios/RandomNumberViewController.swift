@@ -23,8 +23,32 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var precisionLabel: UILabel!
     @IBOutlet weak var fromTextBox: UITextField!
     @IBOutlet weak var toTextBox: UITextField!
+    @IBOutlet weak var answerLabelTitle: UILabel!
     
-    //MARK: private
+    //MARK: private functions
+    private func calculateRandomNumber(from:Int, to:Int, precision:Double) -> Double {
+        
+        guard(fromNumber > toNumber) else {
+            return Double(toNumber)
+        }
+        
+        let maxDouble = Double(UInt32.max)
+        var trunc = Double(arc4random()) / maxDouble
+        let prec = 1/precision
+        trunc = round(trunc*(prec)) / prec
+        
+        if (precision == 1 && trunc >= 0.5)
+        {
+            trunc = 1.0
+        }
+        
+        let lenght:UInt32 = UInt32(toNumber - fromNumber)
+        let num = arc4random() % (lenght) + UInt32(fromNumber)
+    
+        return trunc + Double(num)
+    }
+    
+    //MARK: private properties
     private var precision = 1.0
     {
         didSet {
@@ -49,10 +73,12 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
     //MARK: actions
     @IBAction func changedToTextBox(_ sender: UITextField) {
         toStepper.value = Double(sender.text!)!
+        toStepper(toStepper)
     }
     
     @IBAction func changedFromTextBox(_ sender: UITextField) {
         fromStepper.value = Double(sender.text!)!
+        fromStepper(fromStepper)
     }
     @IBAction func toStepper(_ sender: UIStepper) {
         toNumber = Int(sender.value)
@@ -67,7 +93,10 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func randomize(_ sender: UIButton) {
-        answerLabel.text = 5.description
+        answerLabel.text = calculateRandomNumber(from: fromNumber, to: toNumber, precision: precision).description
+        
+        answerLabel.isHidden = false
+        answerLabelTitle.isHidden = false
     }
     
     override func viewDidLoad() {
