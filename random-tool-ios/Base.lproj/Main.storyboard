@@ -72,6 +72,9 @@
                                 <rect key="frame" x="8" y="270.5" width="175.5" height="190"/>
                                 <color key="backgroundColor" red="0.27058823529411763" green="0.3529411764705882" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title=" List Randomizer" image="listRandomizer"/>
+                                <connections>
+                                    <segue destination="T0t-uw-PF8" kind="show" id="ZSO-c4-Blq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ief-IL-UQ9">
                                 <rect key="frame" x="191.5" y="270.5" width="175.5" height="190"/>
@@ -543,7 +546,49 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPE-VP-vgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-297" y="118"/>
+            <point key="canvasLocation" x="-988" y="86"/>
+        </scene>
+        <!--List Randomizer View Controller-->
+        <scene sceneID="aoe-DS-cC1">
+            <objects>
+                <viewController id="T0t-uw-PF8" customClass="ListRandomizerViewController" customModule="random_tool_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eyA-i2-4lJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zlB-QE-JLG">
+                                <rect key="frame" x="16" y="80" width="343" height="261"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoF-su-OTw">
+                                <rect key="frame" x="16" y="349" width="343" height="30"/>
+                                <state key="normal" title="Randomize"/>
+                                <connections>
+                                    <action selector="randomize:" destination="T0t-uw-PF8" eventType="touchUpInside" id="2M1-xm-fpv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81176470588235294" green="0.84705882352941175" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FKR-p4-jRi" firstAttribute="trailing" secondItem="zlB-QE-JLG" secondAttribute="trailing" constant="16" id="FO7-n4-e5s"/>
+                            <constraint firstItem="OoF-su-OTw" firstAttribute="leading" secondItem="FKR-p4-jRi" secondAttribute="leading" constant="16" id="Fkh-Hf-79f"/>
+                            <constraint firstItem="FKR-p4-jRi" firstAttribute="bottom" secondItem="OoF-su-OTw" secondAttribute="bottom" constant="288" id="G8T-wJ-eya"/>
+                            <constraint firstItem="zlB-QE-JLG" firstAttribute="top" secondItem="FKR-p4-jRi" secondAttribute="top" constant="16" id="SRf-Tv-Q01"/>
+                            <constraint firstItem="zlB-QE-JLG" firstAttribute="leading" secondItem="FKR-p4-jRi" secondAttribute="leading" constant="16" id="eat-to-18i"/>
+                            <constraint firstItem="OoF-su-OTw" firstAttribute="top" secondItem="zlB-QE-JLG" secondAttribute="bottom" constant="8" id="mWC-Kx-fag"/>
+                            <constraint firstItem="FKR-p4-jRi" firstAttribute="trailing" secondItem="OoF-su-OTw" secondAttribute="trailing" constant="16" id="nN1-D7-mns"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FKR-p4-jRi"/>
+                    </view>
+                    <connections>
+                        <outlet property="text" destination="zlB-QE-JLG" id="ylg-Wa-wUM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2H-7W-uKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138" y="86"/>
         </scene>
     </scenes>
     <resources>

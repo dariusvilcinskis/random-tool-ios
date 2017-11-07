@@ -19,6 +19,7 @@
 		69D399791FB19B5C00E150F1 /* WinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D399781FB19B5C00E150F1 /* WinnerViewController.swift */; };
 		69D3997B1FB19FBF00E150F1 /* DecideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D3997A1FB19FBF00E150F1 /* DecideViewController.swift */; };
 		69D3997D1FB1A19000E150F1 /* CoinFlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D3997C1FB1A19000E150F1 /* CoinFlipViewController.swift */; };
+		69D3997F1FB1A4FF00E150F1 /* ListRandomizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D3997E1FB1A4FF00E150F1 /* ListRandomizerViewController.swift */; };
 		69FFA4341FAB10F8009EAEC9 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FFA4331FAB10F8009EAEC9 /* MenuItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		69D399781FB19B5C00E150F1 /* WinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerViewController.swift; sourceTree = "<group>"; };
 		69D3997A1FB19FBF00E150F1 /* DecideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecideViewController.swift; sourceTree = "<group>"; };
 		69D3997C1FB1A19000E150F1 /* CoinFlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFlipViewController.swift; sourceTree = "<group>"; };
+		69D3997E1FB1A4FF00E150F1 /* ListRandomizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRandomizerViewController.swift; sourceTree = "<group>"; };
 		69FFA4331FAB10F8009EAEC9 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 				69D3997A1FB19FBF00E150F1 /* DecideViewController.swift */,
 				69D399781FB19B5C00E150F1 /* WinnerViewController.swift */,
 				69D3997C1FB1A19000E150F1 /* CoinFlipViewController.swift */,
+				69D3997E1FB1A4FF00E150F1 /* ListRandomizerViewController.swift */,
 				69D1B1BC1FA8BDCC00242C05 /* Main.storyboard */,
 				69D1B1BF1FA8BDCC00242C05 /* Assets.xcassets */,
 				69D1B1C11FA8BDCC00242C05 /* LaunchScreen.storyboard */,
@@ -223,6 +226,7 @@
 				69D1B1BB1FA8BDCC00242C05 /* ViewController.swift in Sources */,
 				699AF4E41FB0B3B3003C1A15 /* DiceViewController.swift in Sources */,
 				69D3997B1FB19FBF00E150F1 /* DecideViewController.swift in Sources */,
+				69D3997F1FB1A4FF00E150F1 /* ListRandomizerViewController.swift in Sources */,
 				69BBC8D21FAF787F0085D526 /* RandomNumberViewController.swift in Sources */,
 				69D3997D1FB1A19000E150F1 /* CoinFlipViewController.swift in Sources */,
 				695625471FB04B23008C82D8 /* DiceCollectionViewCell.swift in Sources */,
