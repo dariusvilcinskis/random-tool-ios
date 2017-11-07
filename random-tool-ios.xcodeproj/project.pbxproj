@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		695625471FB04B23008C82D8 /* DiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695625461FB04B23008C82D8 /* DiceCollectionViewCell.swift */; };
 		6997F1091FAA260600826A01 /* ShellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6997F1081FAA260600826A01 /* ShellTableViewCell.swift */; };
 		6997F10D1FAA33E900826A01 /* ShellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6997F10C1FAA33E900826A01 /* ShellViewController.swift */; };
+		699AF4E41FB0B3B3003C1A15 /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699AF4E31FB0B3B3003C1A15 /* DiceViewController.swift */; };
 		69BBC8D21FAF787F0085D526 /* RandomNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BBC8D11FAF787F0085D526 /* RandomNumberViewController.swift */; };
 		69D1B1B91FA8BDCC00242C05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1B1B81FA8BDCC00242C05 /* AppDelegate.swift */; };
 		69D1B1BB1FA8BDCC00242C05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1B1BA1FA8BDCC00242C05 /* ViewController.swift */; };
@@ -31,8 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		695625461FB04B23008C82D8 /* DiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		6997F1081FAA260600826A01 /* ShellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellTableViewCell.swift; sourceTree = "<group>"; };
 		6997F10C1FAA33E900826A01 /* ShellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellViewController.swift; sourceTree = "<group>"; };
+		699AF4E31FB0B3B3003C1A15 /* DiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
 		69BBC8D11FAF787F0085D526 /* RandomNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberViewController.swift; sourceTree = "<group>"; };
 		69D1B1B51FA8BDCC00242C05 /* random-tool-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "random-tool-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D1B1B81FA8BDCC00242C05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,10 +95,12 @@
 				69D1B1BA1FA8BDCC00242C05 /* ViewController.swift */,
 				69BBC8D11FAF787F0085D526 /* RandomNumberViewController.swift */,
 				6997F1081FAA260600826A01 /* ShellTableViewCell.swift */,
-				69D1B1BC1FA8BDCC00242C05 /* Main.storyboard */,
 				69FFA4331FAB10F8009EAEC9 /* MenuItem.swift */,
+				695625461FB04B23008C82D8 /* DiceCollectionViewCell.swift */,
+				699AF4E31FB0B3B3003C1A15 /* DiceViewController.swift */,
 				6997F10C1FAA33E900826A01 /* ShellViewController.swift */,
 				69FFA4531FAB4B34009EAEC9 /* ShellController.swift */,
+				69D1B1BC1FA8BDCC00242C05 /* Main.storyboard */,
 				69D1B1BF1FA8BDCC00242C05 /* Assets.xcassets */,
 				69D1B1C11FA8BDCC00242C05 /* LaunchScreen.storyboard */,
 				69D1B1C41FA8BDCC00242C05 /* Info.plist */,
@@ -215,8 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				69D1B1BB1FA8BDCC00242C05 /* ViewController.swift in Sources */,
+				699AF4E41FB0B3B3003C1A15 /* DiceViewController.swift in Sources */,
 				69BBC8D21FAF787F0085D526 /* RandomNumberViewController.swift in Sources */,
 				6997F10D1FAA33E900826A01 /* ShellViewController.swift in Sources */,
+				695625471FB04B23008C82D8 /* DiceCollectionViewCell.swift in Sources */,
 				6997F1091FAA260600826A01 /* ShellTableViewCell.swift in Sources */,
 				69D1B1B91FA8BDCC00242C05 /* AppDelegate.swift in Sources */,
 				69FFA4541FAB4B34009EAEC9 /* ShellController.swift in Sources */,
