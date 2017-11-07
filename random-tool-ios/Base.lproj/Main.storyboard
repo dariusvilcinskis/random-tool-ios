@@ -164,6 +164,7 @@
                         <constraints>
                             <constraint firstItem="5IE-Fa-xi5" firstAttribute="leading" secondItem="0Nt-ox-5GB" secondAttribute="trailing" constant="8" id="36A-fZ-ieY"/>
                             <constraint firstItem="H6k-oW-9zU" firstAttribute="leading" secondItem="Tbe-T1-4eY" secondAttribute="leading" constant="16" id="6W7-mE-wa1"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7KI-Jc-d8V" secondAttribute="trailing" constant="20" symbolic="YES" id="DdS-d2-BHH"/>
                             <constraint firstItem="hrA-rL-IvV" firstAttribute="leading" secondItem="0Nt-ox-5GB" secondAttribute="leading" id="EyH-kw-Cke"/>
                             <constraint firstItem="7KI-Jc-d8V" firstAttribute="leading" secondItem="H6k-oW-9zU" secondAttribute="leading" id="MdC-jC-0r8"/>
                             <constraint firstItem="Tbe-T1-4eY" firstAttribute="trailing" secondItem="H6k-oW-9zU" secondAttribute="trailing" constant="16" id="NNS-ze-M6r"/>

@@ -8,26 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ShellController {
-    @IBOutlet weak var nicerDicer: UIView!
-    
-
-    
-    func changeShellContent(MenuItem: MenuItem) {
-        
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "coinFlipView") as UIViewController
-        for view in nicerDicer.subviews {
-            view.removeFromSuperview()
-        }
-        
-        if nicerDicer == nil {
-            return
-        }
-        
-        nicerDicer.addSubview(nextViewController.view)
-    }
+class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
