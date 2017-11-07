@@ -38,6 +38,9 @@
                                 <rect key="frame" x="191.5" y="270.5" width="175.5" height="190"/>
                                 <color key="backgroundColor" red="0.27058823529411763" green="0.3529411764705882" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title=" Winner Selection" image="winnerSelection"/>
+                                <connections>
+                                    <segue destination="8QE-Lt-hn1" kind="show" id="ckl-xa-17w"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8h-Kg-noJ">
                                 <rect key="frame" x="8" y="468.5" width="175.5" height="190.5"/>
@@ -48,6 +51,9 @@
                                 <rect key="frame" x="191.5" y="468.5" width="175.5" height="190.5"/>
                                 <color key="backgroundColor" red="0.27058823529411763" green="0.3529411764705882" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title=" Decision" image="decision"/>
+                                <connections>
+                                    <segue destination="S2O-m6-b0d" kind="show" id="kCl-Aq-4ab"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2r-rM-X2Z">
                                 <rect key="frame" x="191.5" y="72" width="175.5" height="190.5"/>
@@ -94,7 +100,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="453.60000000000002" y="118.29085457271366"/>
+            <point key="canvasLocation" x="1286" y="86"/>
+        </scene>
+        <!--Decide View Controller-->
+        <scene sceneID="BQ9-H9-ZIa">
+            <objects>
+                <viewController id="S2O-m6-b0d" customClass="DecideViewController" customModule="random_tool_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LJo-pZ-QPI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6D-zo-MgN">
+                                <rect key="frame" x="16" y="80" width="343" height="30"/>
+                                <state key="normal" title="Decide"/>
+                                <connections>
+                                    <action selector="decide:" destination="S2O-m6-b0d" eventType="touchUpInside" id="YHS-PM-oXu"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGm-cs-MJP">
+                                <rect key="frame" x="16" y="139" width="343" height="177"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="148"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81176470588235294" green="0.84705882352941175" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="c6D-zo-MgN" firstAttribute="leading" secondItem="TqO-2f-cDV" secondAttribute="leading" constant="16" id="4jW-z2-qMq"/>
+                            <constraint firstItem="TqO-2f-cDV" firstAttribute="trailing" secondItem="c6D-zo-MgN" secondAttribute="trailing" constant="16" id="5kZ-yy-xRM"/>
+                            <constraint firstItem="eGm-cs-MJP" firstAttribute="top" secondItem="c6D-zo-MgN" secondAttribute="bottom" constant="29" id="8tJ-cV-peQ"/>
+                            <constraint firstItem="c6D-zo-MgN" firstAttribute="centerX" secondItem="TqO-2f-cDV" secondAttribute="centerX" id="AkI-0b-37W"/>
+                            <constraint firstItem="c6D-zo-MgN" firstAttribute="top" secondItem="TqO-2f-cDV" secondAttribute="top" constant="16" id="YX9-nA-Zts"/>
+                            <constraint firstItem="eGm-cs-MJP" firstAttribute="leading" secondItem="TqO-2f-cDV" secondAttribute="leading" constant="16" id="crP-ry-RTq"/>
+                            <constraint firstItem="eGm-cs-MJP" firstAttribute="centerX" secondItem="TqO-2f-cDV" secondAttribute="centerX" id="dGP-UE-J1X"/>
+                            <constraint firstItem="TqO-2f-cDV" firstAttribute="trailing" secondItem="eGm-cs-MJP" secondAttribute="trailing" constant="16" id="zL4-hS-m55"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TqO-2f-cDV"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="eGm-cs-MJP" id="X63-dY-LrL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cz8-v5-uoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952.8" y="530.28485757121439"/>
         </scene>
         <!--Dice View Controller-->
         <scene sceneID="7C9-hE-73J">
@@ -187,7 +236,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmv-eE-1hT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247.2" y="659.82008995502258"/>
+            <point key="canvasLocation" x="1974" y="-289"/>
+        </scene>
+        <!--Winner View Controller-->
+        <scene sceneID="J8h-Qd-0LE">
+            <objects>
+                <viewController id="8QE-Lt-hn1" customClass="WinnerViewController" customModule="random_tool_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zUF-LX-8N2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-Tc-mVz">
+                                <rect key="frame" x="16" y="80" width="343" height="258"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RU1-XO-xZe">
+                                <rect key="frame" x="141" y="346" width="93" height="30"/>
+                                <state key="normal" title="Select winner"/>
+                                <connections>
+                                    <action selector="selectWinner:" destination="8QE-Lt-hn1" eventType="touchUpInside" id="Xb9-Oc-MXP"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQZ-hO-O22">
+                                <rect key="frame" x="160.5" y="384" width="54.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81176470588235294" green="0.84705882352941175" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dDm-Tc-mVz" firstAttribute="leading" secondItem="GhZ-m4-NEV" secondAttribute="leading" constant="16" id="0Da-Vq-exy"/>
+                            <constraint firstItem="GhZ-m4-NEV" firstAttribute="bottom" secondItem="xQZ-hO-O22" secondAttribute="bottom" constant="262" id="40P-xb-h4b"/>
+                            <constraint firstItem="GhZ-m4-NEV" firstAttribute="trailing" secondItem="dDm-Tc-mVz" secondAttribute="trailing" constant="16" id="42j-3O-Hv4"/>
+                            <constraint firstItem="RU1-XO-xZe" firstAttribute="centerX" secondItem="GhZ-m4-NEV" secondAttribute="centerX" id="4vn-TM-DT3"/>
+                            <constraint firstItem="xQZ-hO-O22" firstAttribute="top" secondItem="RU1-XO-xZe" secondAttribute="bottom" constant="8" id="c0C-db-z68"/>
+                            <constraint firstItem="xQZ-hO-O22" firstAttribute="centerX" secondItem="GhZ-m4-NEV" secondAttribute="centerX" id="n0y-wM-U3l"/>
+                            <constraint firstItem="dDm-Tc-mVz" firstAttribute="top" secondItem="GhZ-m4-NEV" secondAttribute="top" constant="16" id="oUz-xv-Tum"/>
+                            <constraint firstItem="RU1-XO-xZe" firstAttribute="top" secondItem="dDm-Tc-mVz" secondAttribute="bottom" constant="8" id="sAm-tq-4qg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GhZ-m4-NEV"/>
+                    </view>
+                    <connections>
+                        <outlet property="listTextBox" destination="dDm-Tc-mVz" id="fPU-vm-Wki"/>
+                        <outlet property="winnerLabel" destination="xQZ-hO-O22" id="rGL-Xx-NAk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1GI-iq-He8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2637.5999999999999" y="85.907046476761622"/>
         </scene>
         <!--Random Number View Controller-->
         <scene sceneID="MwK-Bb-iOF">
@@ -386,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhU-bg-3tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1244" y="-96.7016491754123"/>
+            <point key="canvasLocation" x="598" y="-289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I3f-aA-VHe">
