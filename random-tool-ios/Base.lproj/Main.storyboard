@@ -11,6 +11,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Coin Flip View Controller-->
+        <scene sceneID="cZx-XW-MEx">
+            <objects>
+                <viewController id="yat-Ys-mDt" customClass="CoinFlipViewController" customModule="random_tool_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g4G-Gm-grv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoB-WU-ggf">
+                                <rect key="frame" x="16" y="80" width="343" height="30"/>
+                                <state key="normal" title="Flip"/>
+                                <connections>
+                                    <action selector="flip:" destination="yat-Ys-mDt" eventType="touchUpInside" id="Zl2-Hq-f7Q"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HxM-E3-YJi">
+                                <rect key="frame" x="16" y="225" width="343" height="168"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81176470588235294" green="0.84705882352941175" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YoB-WU-ggf" firstAttribute="top" secondItem="7bV-HR-gMS" secondAttribute="top" constant="16" id="3C5-wV-cYJ"/>
+                            <constraint firstItem="7bV-HR-gMS" firstAttribute="bottom" secondItem="HxM-E3-YJi" secondAttribute="bottom" constant="274" id="SJD-gR-48e"/>
+                            <constraint firstItem="HxM-E3-YJi" firstAttribute="trailing" secondItem="YoB-WU-ggf" secondAttribute="trailing" id="XX6-CK-4PX"/>
+                            <constraint firstItem="HxM-E3-YJi" firstAttribute="top" secondItem="YoB-WU-ggf" secondAttribute="bottom" constant="115" id="aS2-rC-1DK"/>
+                            <constraint firstItem="YoB-WU-ggf" firstAttribute="leading" secondItem="7bV-HR-gMS" secondAttribute="leading" constant="16" id="auM-cf-vnz"/>
+                            <constraint firstItem="HxM-E3-YJi" firstAttribute="leading" secondItem="YoB-WU-ggf" secondAttribute="leading" id="bp9-og-F9z"/>
+                            <constraint firstItem="7bV-HR-gMS" firstAttribute="trailing" secondItem="YoB-WU-ggf" secondAttribute="trailing" constant="16" id="wPa-DR-sP0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7bV-HR-gMS"/>
+                    </view>
+                    <connections>
+                        <outlet property="coinImage" destination="HxM-E3-YJi" id="0uH-vz-AxA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fyz-li-Qku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597.60000000000002" y="529.38530734632684"/>
+        </scene>
         <!--Random Tool-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -46,6 +85,9 @@
                                 <rect key="frame" x="8" y="468.5" width="175.5" height="190.5"/>
                                 <color key="backgroundColor" red="0.27058823529411763" green="0.3529411764705882" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title=" Coin Flip" image="coinFlip"/>
+                                <connections>
+                                    <segue destination="yat-Ys-mDt" kind="show" id="1Qr-dY-BEV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A17-iL-JTc">
                                 <rect key="frame" x="191.5" y="468.5" width="175.5" height="190.5"/>
@@ -127,13 +169,11 @@
                         <color key="backgroundColor" red="0.81176470588235294" green="0.84705882352941175" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="c6D-zo-MgN" firstAttribute="leading" secondItem="TqO-2f-cDV" secondAttribute="leading" constant="16" id="4jW-z2-qMq"/>
-                            <constraint firstItem="TqO-2f-cDV" firstAttribute="trailing" secondItem="c6D-zo-MgN" secondAttribute="trailing" constant="16" id="5kZ-yy-xRM"/>
                             <constraint firstItem="eGm-cs-MJP" firstAttribute="top" secondItem="c6D-zo-MgN" secondAttribute="bottom" constant="29" id="8tJ-cV-peQ"/>
                             <constraint firstItem="c6D-zo-MgN" firstAttribute="centerX" secondItem="TqO-2f-cDV" secondAttribute="centerX" id="AkI-0b-37W"/>
                             <constraint firstItem="c6D-zo-MgN" firstAttribute="top" secondItem="TqO-2f-cDV" secondAttribute="top" constant="16" id="YX9-nA-Zts"/>
                             <constraint firstItem="eGm-cs-MJP" firstAttribute="leading" secondItem="TqO-2f-cDV" secondAttribute="leading" constant="16" id="crP-ry-RTq"/>
                             <constraint firstItem="eGm-cs-MJP" firstAttribute="centerX" secondItem="TqO-2f-cDV" secondAttribute="centerX" id="dGP-UE-J1X"/>
-                            <constraint firstItem="TqO-2f-cDV" firstAttribute="trailing" secondItem="eGm-cs-MJP" secondAttribute="trailing" constant="16" id="zL4-hS-m55"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TqO-2f-cDV"/>
                     </view>
