@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Wide310x150Logo.scale-200.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Icon-Small-50x50@1x.png",
+      "filename" : "Wide310x150Logo.scale-400.png",
       "scale" : "2x"
     },
     {
