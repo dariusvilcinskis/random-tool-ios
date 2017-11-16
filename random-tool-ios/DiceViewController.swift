@@ -59,7 +59,6 @@ class DiceViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var numberOfDiceLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dice.count
     }
@@ -73,6 +72,8 @@ class DiceViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Dice Roll"
 
         collectionView.delegate = self
         collectionView.dataSource = self

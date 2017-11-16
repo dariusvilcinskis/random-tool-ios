@@ -33,7 +33,7 @@ class CoinFlipViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.title = "Coin Flip"
     }
 
     override func didReceiveMemoryWarning() {

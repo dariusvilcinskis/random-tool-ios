@@ -102,6 +102,8 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Random Number"
+        
         self.toTextBox.delegate = self
         self.fromTextBox.delegate = self
     }
