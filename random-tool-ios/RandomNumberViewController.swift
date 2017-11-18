@@ -18,17 +18,14 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
 
     //MARK: outlets
     @IBOutlet weak var answerLabel: UILabel!
-    @IBOutlet weak var fromStepper: UIStepper!
-    @IBOutlet weak var toStepper: UIStepper!
-    @IBOutlet weak var precisionLabel: UILabel!
     @IBOutlet weak var fromTextBox: UITextField!
     @IBOutlet weak var toTextBox: UITextField!
-    @IBOutlet weak var answerLabelTitle: UILabel!
+    @IBOutlet weak var precisionLabel: UILabel!
     
     //MARK: private functions
     private func calculateRandomNumber(from:Int, to:Int, precision:Double) -> Double {
         
-        guard(fromNumber > toNumber) else {
+        guard(fromNumber < toNumber) else {
             return Double(toNumber)
         }
         
@@ -52,7 +49,7 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
     private var precision = 1.0
     {
         didSet {
-            precisionLabel.text = precision.description
+            precisionLabel.text = "Precision: \(precision.description)"
         }
     }
     
@@ -72,13 +69,9 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: actions
     @IBAction func changedToTextBox(_ sender: UITextField) {
-        toStepper.value = Double(sender.text!)!
-        toStepper(toStepper)
     }
     
     @IBAction func changedFromTextBox(_ sender: UITextField) {
-        fromStepper.value = Double(sender.text!)!
-        fromStepper(fromStepper)
     }
     @IBAction func toStepper(_ sender: UIStepper) {
         toNumber = Int(sender.value)
@@ -96,7 +89,6 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
         answerLabel.text = calculateRandomNumber(from: fromNumber, to: toNumber, precision: precision).description
         
         answerLabel.isHidden = false
-        answerLabelTitle.isHidden = false
     }
     
     override func viewDidLoad() {
@@ -106,10 +98,5 @@ class RandomNumberViewController: UIViewController, UITextFieldDelegate {
         
         self.toTextBox.delegate = self
         self.fromTextBox.delegate = self
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
